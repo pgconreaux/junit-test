@@ -111,20 +111,19 @@ The `canReceiveMessage` method should return false as the default.
 The current test always satisfies the conditional and doesn't cover the case where the `if` statement is `false`.
  
 ### Defective Code
-  
+
     if (currentUser.equals(recipient) || currentUser.getHasPermissionToModifyRecipients()) {
         return message.getAddRecipientAllowed(recipient);
     }
     return true;
      
 ### Fixed Code
- 
-   if (currentUser.equals(recipient) || currentUser.getHasPermissionToModifyRecipients()) {
-        return message.getAddRecipientAllowed(recipient);
-   }
-   return false;
 
-    
+    if (currentUser.equals(recipient) || currentUser.getHasPermissionToModifyRecipients()) {
+        return message.getAddRecipientAllowed(recipient);
+    }
+    return false;
+   
 ### New Test
 
 A test for this bug would need to introduce a user that differs from the recipient and does not have permissions
