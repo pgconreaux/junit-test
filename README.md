@@ -46,6 +46,7 @@ The following is a test case that exhibits this verification:
             ArrayList<Message> result = rec.addRecipientToAllMessages(messages, user, user);
             // Assert that only one Message failed to be updated
             assertEquals(result.size(), 1);
+            // Verify that addRecipient is called once
             verify(mockMgr).addRecipient(any(User.class), any(List.class));
         }
         
