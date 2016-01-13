@@ -10,7 +10,7 @@ The three bugs identified are the following:
 ### Description
 
 The `if` statement checks that `successfulMessages` is empty to allow adding a recipient to the messages.  
-However, the logic should check that 'successfulMessages` is _non-empty_.
+However, the logic should check that `successfulMessages` is _non-empty_.
 
 ### Test Escape
 
